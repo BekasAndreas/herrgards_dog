@@ -1,0 +1,955 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version 1.6.0-4-g7f85cfe  Build Version 1.6.7995.38578
+     For more information, please see http//wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="quadrupedurdf" xmlns:xacro="http://www.ros.org/wiki/xacro">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-2.41518622096172E-05 9.40480012225687E-11 0.0375276829935441"
+        rpy="0 0 0" />
+      <mass
+        value="1.81527551594541" />
+      <inertia
+        ixx="0.0142680869985669"
+        ixy="-3.72785179196853E-13"
+        ixz="6.22837132202229E-13"
+        iyy="0.0457434585976222"
+        iyz="2.83050289879701E-15"
+        izz="0.058003209404555" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadrupedurdf/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadrupedurdf/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="11_Link">
+    <inertial>
+      <origin
+        xyz="0.059828 -0.015291 -0.00025964"
+        rpy="0 0 0" />
+      <mass
+        value="0.17848" />
+      <inertia
+        ixx="7.0894E-05"
+        ixy="2.4159E-05"
+        ixz="-1.4074E-08"
+        iyy="0.00017259"
+        iyz="7.712E-09"
+        izz="0.0001813" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadrupedurdf/meshes/11_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadrupedurdf/meshes/11_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="11_Joint"
+    type="revolute">
+    <origin
+      xyz="0.199749999999999 -0.0900000000000031 0.0329999999999989"
+      rpy="-1.5707963267949 0.320242259914463 -1.5707963267949" />
+    <parent
+      link="base_link" />
+    <child
+      link="11_Link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-0.785"
+      upper="0.785"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="12_Link">
+    <inertial>
+      <origin
+        xyz="0.0757949999999999 -5.28703831223498E-06 -2.77555756156289E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.159582160895809" />
+      <inertia
+        ixx="2.03082215218294E-05"
+        ixy="1.60253469010869E-20"
+        ixz="3.18000233089746E-08"
+        iyy="0.000102280735682494"
+        iyz="6.07224109356345E-21"
+        izz="0.000116619476028071" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadrupedurdf/meshes/12_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadrupedurdf/meshes/12_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="12_Joint"
+    type="revolute">
+    <origin
+      xyz="0.10483 0 0"
+      rpy="1.5708 0 1.2506" />
+    <parent
+      link="11_Link" />
+    <child
+      link="12_Link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="13_Link">
+    <inertial>
+      <origin
+        xyz="0.09282 0.0039094 1.5034E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.10832" />
+      <inertia
+        ixx="2.1898E-05"
+        ixy="2.429E-06"
+        ixz="8.5302E-08"
+        iyy="8.747E-05"
+        iyz="-3.5346E-09"
+        izz="8.108E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadrupedurdf/meshes/13_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadrupedurdf/meshes/13_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="13_Joint"
+    type="revolute">
+    <origin
+      xyz="0.15159 0 0"
+      rpy="0 -0.0014413 -0.072129" />
+    <parent
+      link="12_Link" />
+    <child
+      link="13_Link" />
+    <axis
+      xyz="-0.0014413 0 -1" />
+    <limit
+      lower="-2.356"
+      upper="2.356"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="14_Link">
+    <inertial>
+      <origin
+        xyz="-0.29229 -0.20936 -0.18933"
+        rpy="0 0 0" />
+      <mass
+        value="3.6008" />
+      <inertia
+        ixx="0.18838"
+        ixy="0.0061666"
+        ixz="-4.5547E-05"
+        iyy="0.10878"
+        iyz="-8.2106E-06"
+        izz="0.15684" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadrupedurdf/meshes/14_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadrupedurdf/meshes/14_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="14_Joint"
+    type="fixed">
+    <origin
+      xyz="0.17345 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="13_Link" />
+    <child
+      link="14_Link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="21_Link">
+    <inertial>
+      <origin
+        xyz="0.059828205868732 0.0152907719754376 -0.000260216952170322"
+        rpy="0 0 0" />
+      <mass
+        value="0.178480973634281" />
+      <inertia
+        ixx="7.09037127143782E-05"
+        ixy="-2.41724417942258E-05"
+        ixz="-1.30124655776256E-08"
+        iyy="0.0001725795421579"
+        iyz="-7.46717224269452E-09"
+        izz="0.000181296294468812" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadrupedurdf/meshes/21_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadrupedurdf/meshes/21_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="21_Joint"
+    type="revolute">
+    <origin
+      xyz="0.19975 0.09 0.033001"
+      rpy="1.5708 0.32025 1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="21_Link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-0.785"
+      upper="0.785"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="22_Link">
+    <inertial>
+      <origin
+        xyz="0.0757950000000003 -4.99935693215603E-06 -2.77555756156289E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.159582160895809" />
+      <inertia
+        ixx="2.03082215218293E-05"
+        ixy="-2.66631685426408E-20"
+        ixz="3.18000233089385E-08"
+        iyy="0.000102280735682494"
+        iyz="-1.51386958573722E-20"
+        izz="0.000116619476028071" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadrupedurdf/meshes/22_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadrupedurdf/meshes/22_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="22_Joint"
+    type="revolute">
+    <origin
+      xyz="0.104829938390638 0 0"
+      rpy="-1.57080537843517 0 -1.25054501522657" />
+    <parent
+      link="21_Link" />
+    <child
+      link="22_Link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="23_Link">
+    <inertial>
+      <origin
+        xyz="0.0928201508133602 -0.00390896841382274 1.50339621219908E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.108324977225404" />
+      <inertia
+        ixx="2.18978047452976E-05"
+        ixy="-2.42866726579855E-06"
+        ixz="8.5297109168807E-08"
+        iyy="8.74699487603449E-05"
+        iyz="3.46726493525165E-09"
+        izz="8.10801910272362E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadrupedurdf/meshes/23_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadrupedurdf/meshes/23_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="23_Joint"
+    type="revolute">
+    <origin
+      xyz="0.15159 0 0"
+      rpy="0 -0.00144132764035148 0.072134737194519" />
+    <parent
+      link="22_Link" />
+    <child
+      link="23_Link" />
+    <axis
+      xyz="0.00144132714130748 0 0.999998961287496" />
+    <limit
+      lower="-2.356"
+      upper="2.356"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="24_Link">
+    <inertial>
+      <origin
+        xyz="-0.292286343634505 0.209363780250409 -0.189328916373556"
+        rpy="0 0 0" />
+      <mass
+        value="3.60083016165355" />
+      <inertia
+        ixx="0.188375051482458"
+        ixy="-0.00616704407615997"
+        ixz="-4.53642209483719E-05"
+        iyy="0.108775595222192"
+        iyz="9.56617898351358E-06"
+        izz="0.156837691659894" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadrupedurdf/meshes/24_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadrupedurdf/meshes/24_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="24_joint"
+    type="fixed">
+    <origin
+      xyz="0.17345 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="23_Link" />
+    <child
+      link="24_Link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="31_Link">
+    <inertial>
+      <origin
+        xyz="0.0598281242917883 -0.0152909011813284 -0.000259641887755319"
+        rpy="0 0 0" />
+      <mass
+        value="0.178480973634279" />
+      <inertia
+        ixx="7.08940335274545E-05"
+        ixy="2.41591211589919E-05"
+        ixz="-1.40741406194066E-08"
+        iyy="0.00017258922160305"
+        iyz="7.71203123800007E-09"
+        izz="0.000181296294210585" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadrupedurdf/meshes/31_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadrupedurdf/meshes/31_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="31_Joint"
+    type="revolute">
+    <origin
+      xyz="-0.20025 -0.09 0.033"
+      rpy="-1.5708 0.32024 -1.5708" />
+    <parent
+      link="base_link" />
+    <child
+      link="31_Link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-0.785"
+      upper="0.785"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="32_Link">
+    <inertial>
+      <origin
+        xyz="0.0757949999999998 -5.28703831215172E-06 -2.77555756156289E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.15958216089581" />
+      <inertia
+        ixx="2.03082215218294E-05"
+        ixy="6.53657483813837E-20"
+        ixz="3.18000233089559E-08"
+        iyy="0.000102280735682494"
+        iyz="-2.70810016292777E-21"
+        izz="0.000116619476028071" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadrupedurdf/meshes/32_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadrupedurdf/meshes/32_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="32_Joint"
+    type="revolute">
+    <origin
+      xyz="0.104829623675753 0 0"
+      rpy="1.5707963267949 0 1.25055406688044" />
+    <parent
+      link="31_Link" />
+    <child
+      link="32_Link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="33_Link">
+    <inertial>
+      <origin
+        xyz="0.0928201010765243 0.00390943416330725 1.50339782375164E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.108324977225404" />
+      <inertia
+        ixx="2.18978335350726E-05"
+        ixy="2.42903826789838E-06"
+        ixz="8.53019272511978E-08"
+        iyy="8.74699199845184E-05"
+        iyz="-3.53456469498987E-09"
+        izz="8.10801910132874E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadrupedurdf/meshes/33_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadrupedurdf/meshes/33_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="33_Joint"
+    type="revolute">
+    <origin
+      xyz="0.15159 0 0"
+      rpy="0 -0.00144132823905319 -0.0721289885273569" />
+    <parent
+      link="32_Link" />
+    <child
+      link="33_Link" />
+    <axis
+      xyz="-0.00144132774000893 0 -0.999998961286633" />
+    <limit
+      lower="-2.356"
+      upper="2.356"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="34_Link">
+    <inertial>
+      <origin
+        xyz="-0.321114102104846 0.189597831279948 -0.189287365996893"
+        rpy="0 0 0" />
+      <mass
+        value="3.60083016165354" />
+      <inertia
+        ixx="0.188375121856343"
+        ixy="0.00616658843789637"
+        ixz="-4.55474833577918E-05"
+        iyy="0.10877552432017"
+        iyz="-8.21064194042447E-06"
+        izz="0.156837692188031" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadrupedurdf/meshes/34_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadrupedurdf/meshes/34_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="34_Joint"
+    type="fixed">
+    <origin
+      xyz="0.173451181892774 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="33_Link" />
+    <child
+      link="34_Link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+  <link
+    name="41_Link">
+    <inertial>
+      <origin
+        xyz="0.059828205868732 0.0152907719754376 -0.0002602169521701"
+        rpy="0 0 0" />
+      <mass
+        value="0.17848097363428" />
+      <inertia
+        ixx="7.09037127143782E-05"
+        ixy="-2.41724417942259E-05"
+        ixz="-1.30124655776458E-08"
+        iyy="0.0001725795421579"
+        iyz="-7.46717224272368E-09"
+        izz="0.000181296294468812" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadrupedurdf/meshes/41_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadrupedurdf/meshes/41_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="41_Joint"
+    type="revolute">
+    <origin
+      xyz="-0.200250000000001 0.090000000000003 0.0330009997119106"
+      rpy="1.57079316383598 0.320251311566831 1.57078627943901" />
+    <parent
+      link="base_link" />
+    <child
+      link="41_Link" />
+    <axis
+      xyz="0 0 -0.999999999954527" />
+    <limit
+      lower="-0.785"
+      upper="0.785"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="42_Link">
+    <inertial>
+      <origin
+        xyz="0.0757949999999999 -4.99935693210052E-06 5.55111512312578E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.159582160895809" />
+      <inertia
+        ixx="2.03082215218294E-05"
+        ixy="3.28094431126738E-20"
+        ixz="3.18000233089139E-08"
+        iyy="0.000102280735682494"
+        iyz="-7.08454839579104E-21"
+        izz="0.000116619476028071" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadrupedurdf/meshes/42_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadrupedurdf/meshes/42_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="42_Joint"
+    type="revolute">
+    <origin
+      xyz="0.104829938390638 0 0"
+      rpy="-1.57080537843517 0 -1.25054501522657" />
+    <parent
+      link="41_Link" />
+    <child
+      link="42_Link" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-1.57"
+      upper="1.57"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="43_Link">
+    <inertial>
+      <origin
+        xyz="0.0928201508133602 -0.00390896841382277 1.50339621219908E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.108324977225404" />
+      <inertia
+        ixx="2.18978047452975E-05"
+        ixy="-2.42866726579855E-06"
+        ixz="8.52971091687952E-08"
+        iyy="8.7469948760345E-05"
+        iyz="3.4672649352932E-09"
+        izz="8.10801910272362E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadrupedurdf/meshes/43_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadrupedurdf/meshes/43_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="43_Joint"
+    type="revolute">
+    <origin
+      xyz="0.15159 0 0"
+      rpy="0 -0.00144132764035148 0.072134737194519" />
+    <parent
+      link="42_Link" />
+    <child
+      link="43_Link" />
+    <axis
+      xyz="0.00144132714130748 0 0.999998961287496" />
+    <limit
+      lower="-2.356"
+      upper="2.356"
+      effort="0"
+      velocity="0" />
+  </joint>
+  <link
+    name="44_Link">
+    <inertial>
+      <origin
+        xyz="-0.321115191919784 -0.193333127410801 -0.185468720955035"
+        rpy="0 0 0" />
+      <mass
+        value="3.60083016165354" />
+      <inertia
+        ixx="0.188375051482458"
+        ixy="-0.00616672231059914"
+        ixz="7.76304953009919E-05"
+        iyy="0.10879509096537"
+        iyz="0.000967841782809747"
+        izz="0.156818195916715" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadrupedurdf/meshes/44_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://quadrupedurdf/meshes/44_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="44_Joint"
+    type="fixed">
+    <origin
+      xyz="0.173451253941265 0 0"
+      rpy="0.0199437277438111 0 0" />
+    <parent
+      link="43_Link" />
+    <child
+      link="44_Link" />
+    <axis
+      xyz="0 0 0" />
+  </joint>
+</robot>
